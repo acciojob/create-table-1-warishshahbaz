@@ -1,15 +1,15 @@
 function insert_Row() {
-    //Write your code here
- let tabel = document.getElementById("sampleTable");
-  let newRow = document.createElement("tr");
-  let cell1 = document.createElement("td");
-  let text1 = document.createTextNode("New cell1");
-  cell1.appendChild(text1);
-  let cell2 = document.createElement("td");
-  let text2 = document.createTextNode("New cell2");
-  cell2.appendChild(text2);
-  newRow.appendChild(cell1);
-  newRow.appendChild(cell2);
-  tabel.insertBefore(newRow, tabel.firstChild);
-  
+    // Get the reference to the table
+    var table = document.getElementById("sampleTable");
+
+    // Insert a new row at the last position
+    var newRow = table.insertRow(-1);
+
+    // Insert cells in the new row
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+
+    // Set the values for the cells
+    cell1.innerHTML = "New Cell1";
+    cell2.innerHTML = "New Cell2";
 }
